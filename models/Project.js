@@ -8,5 +8,5 @@ var ProjectSchema = new Schema({
   ongoing: Boolean
 });
 
-var Project = mongoose.Model('Project', ProjectSchema);
+var Project = mongoose.model('Project', ProjectSchema);
 module.exports = Project;
