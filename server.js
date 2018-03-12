@@ -19,7 +19,7 @@ app.use(function(req, res, next) {
  * DATABASE *
  ************/
 
-// var db = require('./models');
+ var db = require('./models');
 
 /**********
  * ROUTES *
@@ -61,6 +61,18 @@ app.get('/api', function apiIndex(req, res) {
       {method: "DELETE", path: "/api/projects/:id", description: "Delete a specific project"}
     ]
   })
+});
+
+app.get('/api/profile', function(req, res) {
+  res.json({
+    name: "Karthik S. Ram",
+    githubUsername: "KarthikSRam",
+    githubLink: "https://github.com/KarthikSRam",
+    githubProfileImage: "https://avatars1.githubusercontent.com/u/9953352?s=400&v=4",
+    personalSiteLink: "https://karthiksram.github.io/about-me-page/",
+    currentCity: "San Francisco",
+    hobbies: ["Coding", "Video Games", "TV Shows"]
+  });
 });
 
 /**********
